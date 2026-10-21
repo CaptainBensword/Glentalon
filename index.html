@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111214">
+  <meta name="description" content="Enter Glen, a land caught between the Serpent Order and the rebellion known as Talon.">
+  <title>Glen — A Talon Story</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" id="home-link" aria-label="Return to Glen homepage">TALON<span>.</span></a>
+    <span class="top-label">AN INTERACTIVE STORY</span>
+  </header>
+
+  <main>
+    <section id="home-screen" class="screen hero">
+      <div class="hero-content">
+        <p class="eyebrow">A WORLD THAT FORGOT ITS PAST</p>
+        <h1>GLEN</h1>
+        <p class="tagline">Some truths are buried for a reason.</p>
+        <div class="intro">
+          <p>Glen was once a land of freedom. Then came the Crisis.</p>
+          <p>No one agrees on what truly happened. The Serpent Order rose from the chaos, promising peace in a world that had nearly lost it.</p>
+          <p>Now the Order watches over Glen, while the rebellion known as Talon survives in the shadows. The truth depends on who you ask.</p>
+        </div>
+        <button id="begin-button" class="primary-button">Begin your story <span aria-hidden="true">→</span></button>
+        <p class="small-note">Your choices will shape what happens next.</p>
+      </div>
+      <div class="hero-mark" aria-hidden="true">G</div>
+    </section>
+
+    <section id="setup-screen" class="screen story-screen hidden">
+      <p class="eyebrow">BEFORE THE STORY BEGINS</p>
+      <h2>Who are you?</h2>
+      <p class="story-text">You can't remember your past. You might as well decide what people should call you.</p>
+      <form id="character-form">
+        <label for="player-name">Your name</label>
+        <input id="player-name" name="player-name" type="text" maxlength="24" placeholder="Enter a name" autocomplete="off" required>
+        <label for="player-identity">How should the story refer to you?</label>
+        <select id="player-identity" name="player-identity">
+          <option value="they">They / them</option>
+          <option value="he">He / him</option>
+          <option value="she">She / her</option>
+          <option value="name">Use my name</option>
+        </select>
+        <button class="primary-button" type="submit">Continue <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
+    <section id="story-screen" class="screen story-screen hidden">
+      <p class="eyebrow" id="scene-location">GLEN · SOMEWHERE IN THE MOUNTAINS</p>
+      <h2 id="scene-title">A Stranger on the Mountain</h2>
+      <div id="story-content" class="story-text" aria-live="polite"></div>
+      <div id="story-choices" class="choices"></div>
+      <p id="choice-feedback" class="feedback hidden" aria-live="polite"></p>
+      <button id="continue-button" class="primary-button hidden">Continue <span aria-hidden="true">→</span></button>
+    </section>
+  </main>
+
+  <footer>
+    <span>A TALON STORY</span>
+    <span>Glen is waiting.</span>
+  </footer>
+</body>
+</html>
